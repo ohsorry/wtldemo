@@ -1,0 +1,31 @@
+﻿生成启动时间为 2012-9-14 16:31:03。
+     1>项目“d:\我的文档\visual studio 2010\Projects\helloworld\wtl_frame\wtl_frame.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\wtl_frame.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\WTL80\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\wtl80\include\atlapp.h(851): warning C4996: 'vswprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 c:\program files\microsoft visual studio 10.0\vc\include\swprintf.inl(97) : 参见“vswprintf”的声明
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"d:\我的文档\visual studio 2010\Projects\helloworld\Debug\wtl_frame.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\wtl_frame.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"d:\我的文档\visual studio 2010\Projects\helloworld\Debug\wtl_frame.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:\我的文档\visual studio 2010\Projects\helloworld\Debug\wtl_frame.lib" /MACHINE:X86 Debug\wtl_frame.res
+         Debug\wtl_frame.exe.embed.manifest.res
+         Debug\main.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\wtl_frame.exe.embed.manifest" /manifest Debug\wtl_frame.exe.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         wtl_frame.vcxproj -> d:\我的文档\visual studio 2010\Projects\helloworld\Debug\wtl_frame.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\wtl_frame.unsuccessfulbuild”。
+         正在对“Debug\wtl_frame.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“d:\我的文档\visual studio 2010\Projects\helloworld\wtl_frame\wtl_frame.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.99

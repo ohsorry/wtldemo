@@ -1,0 +1,7 @@
+project(wtl_demos)
+add_subdirectory(DialogColor)
+add_subdirectory(RibbonDialogSample)
+add_subdirectory(skinnedui)
+add_subdirectory(ProgressStatusBar)
+add_subdirectory(iconpacksample_src)
+add_subdirectory(multipanestatusbar_src)
