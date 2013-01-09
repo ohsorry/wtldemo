@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WTLClock", "WTLClock.vcproj", "{AB68D909-D7ED-41E2-8412-13F9D909F1CD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AB68D909-D7ED-41E2-8412-13F9D909F1CD}.Debug.ActiveCfg = Debug|Win32
+		{AB68D909-D7ED-41E2-8412-13F9D909F1CD}.Debug.Build.0 = Debug|Win32
+		{AB68D909-D7ED-41E2-8412-13F9D909F1CD}.Release.ActiveCfg = Release|Win32
+		{AB68D909-D7ED-41E2-8412-13F9D909F1CD}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
