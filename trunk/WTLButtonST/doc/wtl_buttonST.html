@@ -1,0 +1,135 @@
+<!--------------------------------------------------------------------------->  
+<!--                           INTRODUCTION                                
+
+ The Code Project article submission template (HTML version)
+
+Using this template will help us post your article sooner. To use, just 
+follow the 3 easy steps below:
+ 
+     1. Fill in the article description details
+     2. Add links to your images and downloads
+     3. Include the main article text
+
+That's all there is to it! All formatting will be done by our submission
+scripts and style sheets. 
+
+-->  
+<!--------------------------------------------------------------------------->  
+<!--                        IGNORE THIS SECTION                            -->
+<html>
+<head>
+<title>The Code Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<Style>
+BODY, P, TD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt }
+H2,H3,H4,H5 { color: #ff9900; font-weight: bold; }
+H2 { font-size: 13pt; }
+H3 { font-size: 12pt; }
+H4 { font-size: 10pt; color: black; }
+PRE { BACKGROUND-COLOR: #FBEDBB; FONT-FAMILY: "Courier New", Courier, mono; 
+      WHITE-SPACE: pre; }
+CODE { COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono; }
+</style>
+</head>
+<body bgcolor="#FFFFFF" color=#000000>
+<!--------------------------------------------------------------------------->  
+
+
+<!-------------------------------     STEP 1      --------------------------->
+<!--  Fill in the details (CodeProject will reformat this section for you) -->
+
+<pre>
+Title:       Davide Calabro CButtonST class port to WTL
+Author:      Serge Weinstock
+Email:       sweinst@ukonline.co.uk
+Environment: VC++ 6.0, NT 4.0/ Win 2000, Win95/98/Me
+Keywords:    Button,Bitmqp, WTL
+Level:       Intermediate"
+Description: A fully featured owner-draw button class 
+Section      WTL
+SubSection   General
+</pre>
+
+<hr width=100% noshade>
+
+<!-------------------------------     STEP 2      --------------------------->
+<!--  Include download and sample image information.                       --> 
+
+<ul class=download>
+<li><a href="wtl_buttonST/wtl_buttonST_demo.zip">Download demo project - 570 Kb </a></li>
+<li><a href="wtl_buttonST/wtl_buttonST_src.zip">Download source - 19 Kb</a></li>
+</ul>
+
+<p><IMG alt=CButtonST height=252 width=459 src="wtl_buttonST/CButtonST1.jpg">&nbsp;
+<IMG alt=CButtonST height=252 width=459 src="wtl_buttonST/CButtonST2.jpg">&nbsp;
+<IMG alt=CButtonST height=252 width=459 src="wtl_buttonST/CButtonST3.jpg">&nbsp;
+<IMG alt=CButtonST height=252 width=459 src="wtl_buttonST/CButtonST4.jpg">
+
+
+<!-------------------------------     STEP 3      --------------------------->
+<!--  Add the article text. Please use simple formatting (<h2>, <p> etc)   --> 
+
+<h2>Introduction</h2>
+<p>Now you can use Davide Calabro's excellent <code>CButtonSt</code> class in your ATL/WTL projects.
+
+The Class is still called <code>CButtonSt</code> and it retains a majority of the original code. 
+Just follow these simple instructions:
+
+<OL>
+<LI>Create a WTL Project
+<LI>Design the dialog and add the button controls
+<LI>Add the ButtonST.h header file to your project
+<LI>Assign a <code>CButtonSt</code> to each button.
+<LI>In <code>OnInitDialog</code>,
+	<ul>
+	<li>Subclass each member controls (CButtonST) to each ID using the <code>SubclassWindow</code> method.</li>
+	<li>uses the <code>CButtonSt</code> methods to change the appearance of the control. </li>
+	</ul>
+<LI>In your dialog, don't forget to add the macro <code>REFLECT_NOTIFICATIONS</code> which allows the buttons to get messages like <code>WM_DRAWITEM</code>. 
+</OL>
+
+<pre>  
+class MyDialog : public CDialogImpl&lt;MyDialog&gt;
+{
+	BEGIN_MSG_MAP(MyDialog)
+		...
+		MESSAGE_HANDLER(WM_INITDIALOG, OnInitDialog)
+		REFLECT_NOTIFICATIONS()
+	END_MSG_MAP()
+	...
+	LRESULT OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL&amp; /*bHandled*/);
+	...
+	CButtonST m_btn;
+	...
+};
+
+LRESULT MyDialog::OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL&amp; /*bHandled*/) 
+{
+	...
+	m_btn.SubclassWindow(GetDlgItem(IDC_BTN));
+	m_btn.SetIcon(IDI_EOAPP);
+	m_btn.SetFlat(false);
+	...
+}
+</pre>
+
+<p>See Davide Calabro's original <code>CButtonSt</code> <a href="http://www.codeproject.com/buttonctrl/cbuttonst.asp">article</a> for more details.
+</p>
+
+<h2>Latest Updates</h2>
+<ul>
+<li>26 June 2001
+	<ul>
+	<li> Updated to Davide Calabro's version 3.2</li>
+	<li> Added support for defining the icons from an image list</li>
+	<li> Added support for creating dynamically the buttons</li>
+	</ul>
+</li>
+<li>14 June 2001 - Fixed a bug in the autorepeat feature</li>
+</ul>
+
+Serge <img src="/script/images/smiley_wink.gif" align="absmiddle">.
+
+<!-------------------------------    That's it!   --------------------------->
+</body>
+</html>
