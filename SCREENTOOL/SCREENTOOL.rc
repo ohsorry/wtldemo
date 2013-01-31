@@ -1,0 +1,280 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""SCREENTOOL.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GET_DATA DIALOGEX 0, 0, 186, 53
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TEXT,8,9,170,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,72,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,31,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_VERSION             "Version"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN_DIALOG DIALOGEX 0, 0, 242, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Screen Tool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,188,194,50,16
+    CONTROL         "Draw",IDC_SCREEN_DRAW,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,17,20,50,16
+    GROUPBOX        "Screen Selection",IDC_STATIC,6,4,232,40,0,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_LINE_WIDTH,182,21,46,13,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Line Width",IDC_STATIC,129,24,46,10,0,WS_EX_TRANSPARENT
+    CONTROL         "Minimize to system tray",IDC_MIN_TO_TRAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,194,96,12
+    CONTROL         "Select",IDC_WIN_SELECT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,73,20,50,16
+    GROUPBOX        "Image Path",IDC_STATIC,6,47,232,37,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_IMAGE_PATH,15,61,197,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE_IMG_PATH,217,61,16,14
+    EDITTEXT        IDC_IMAGE_NAME,15,141,197,12,ES_AUTOHSCROLL
+    GROUPBOX        "Image Naming",IDC_STATIC,6,116,232,72,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "All images use this as prefix",IDC_OPT_IMGNAME_1,"Button",
+                    BS_AUTORADIOBUTTON,16,128,183,8
+    CONTROL         "All images ask for prefix",IDC_OPT_IMGNAME_2,"Button",
+                    BS_AUTORADIOBUTTON,16,159,92,10
+    CONTROL         "All images no prefix",IDC_OPT_IMGNAME_3,"Button",
+                    BS_AUTORADIOBUTTON,16,173,93,8
+    GROUPBOX        "",IDC_STATIC,6,85,232,28,0,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_IMAGE_EXT,85,94,49,86,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Target Image Type",IDC_STATIC,10,94,69,12,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 173, 74
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Screen Tool"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,59,54,50,14
+    CTEXT           "Author: Jeremy Matthews",IDC_STATIC,9,14,158,21,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUT               ICON                    "ABOUT.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Author: Jeremy Matthews"
+            VALUE "CompanyName", "no"
+            VALUE "FileDescription", "yes"
+            VALUE "FileVersion", "1.0.0.2"
+            VALUE "InternalName", "SCREENTOOL.exe"
+            VALUE "LegalCopyright", "sometimes"
+            VALUE "LegalTrademarks", "no way"
+            VALUE "OriginalFilename", "SCREENGRABTEST.exe"
+            VALUE "PrivateBuild", "sure"
+            VALUE "ProductName", "SCREENTOOL"
+            VALUE "ProductVersion", "1.0.0.2"
+            VALUE "SpecialBuild", "no"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAY_MENU MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "About...",                    32776
+        MENUITEM SEPARATOR
+        MENUITEM "Draw Selection",              ID_DRAW_SEL
+        MENUITEM "Window Select",               ID_WIN_SEL
+        MENUITEM SEPARATOR
+        MENUITEM "Show",                        ID_SHOW
+        MENUITEM "Shutdown",                    ID_SHUTDOWN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_BREAK                "Break"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Sys. Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "SCREENTOOL.ico"
+#endif    // Neutral (Sys. Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "SCREENTOOL.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
