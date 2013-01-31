@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlueMarquee", "BlueMarquee.vcproj", "{EBCB3809-94B4-43F0-8CB5-56A8F71CC84F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EBCB3809-94B4-43F0-8CB5-56A8F71CC84F}.Debug.ActiveCfg = Debug|Win32
+		{EBCB3809-94B4-43F0-8CB5-56A8F71CC84F}.Debug.Build.0 = Debug|Win32
+		{EBCB3809-94B4-43F0-8CB5-56A8F71CC84F}.Release.ActiveCfg = Release|Win32
+		{EBCB3809-94B4-43F0-8CB5-56A8F71CC84F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
