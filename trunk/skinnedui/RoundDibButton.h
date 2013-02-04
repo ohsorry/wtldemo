@@ -38,8 +38,8 @@ public:
       
       CDib24 dibShadow;
       dibButton.CopyTo(&dibShadow);
-      CGreyScaleImageFilter::Process(&dibShadow);
-      CBrightenImageFilter::Process(&dibShadow, -65);
+      CGreyScaleImageFilter::Process(&dibShadow);		// turn it into gray
+      CBrightenImageFilter::Process(&dibShadow, -65);	// not brighter
 
       COLORREF clrButton = dibButton.GetPixel(0,0);
       COLORREF clrShadow = dibShadow.GetPixel(0,0);
