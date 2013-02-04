@@ -1,11 +1,12 @@
-del *.ncb /Q /S
-del *.pdb /Q /S
-del *.obj /Q /S
-del *.exe /Q /S 
-del *.suo /Q /S
-
-del *.idb /Q /S
-del *.pch /Q /S 
-del *.sdf /Q /S
-
-del *.user /Q /S
+del *.ncb /Q /S /A
+del *.pdb /Q /S /A
+del *.obj /Q /S /A
+del *.suo /Q /S /A
+del *.res /Q /S /A
+del *.suo /Q /S /A
+del BuildLog.htm /Q /S /A
+del *.idb /Q /S /A
+del *.pch /Q /S /A
+del *.sdf /Q /S /A
+del *.user /Q /S /A
+del *.sbr /Q /S /A
