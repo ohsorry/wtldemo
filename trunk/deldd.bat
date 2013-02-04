@@ -10,3 +10,12 @@ del *.pch /Q /S /A
 del *.sdf /Q /S /A
 del *.user /Q /S /A
 del *.sbr /Q /S /A
+del *.tlog /Q /S /A 
+del *.UpgradeLog.XML /Q /S /A
+del *.sln.old /q /s /a
+del *.vcxproj.filters /q /s /a
+del *.log /q /s /a
+del *.lastbuildstate /q /s /a
+del *.lastbuildstate /q /s /a
+del *.embed.manifest /q /s /a
+del *.intermediate.manifest /q /s /a
