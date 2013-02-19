@@ -19,3 +19,5 @@ del *.lastbuildstate /q /s /a
 del *.lastbuildstate /q /s /a
 del *.embed.manifest /q /s /a
 del *.intermediate.manifest /q /s /a
+del *.ilk /q /s /a
+del *.aps /q /s /a
