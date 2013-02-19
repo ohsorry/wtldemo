@@ -1,0 +1,157 @@
+一、主框架添加docking特性
+
+1. 添加 DockImpl.cpp，最好放在stdafx.cpp中， #include<DockImpl.cpp>
+
+2. 添加 #include <DockingFrame.h> in MainFrame.h
+3.	class MainFrame : public dockwins::CDockingFrameImpl<MainFrame> for SDI app
+	class MainFrame : public dockwins::CMDIDockingFrameImpl<MainFrame> for MDI app
+	
+4. 在OnCreate中添加 InitializeDockingFrame(),此处是改变窗口的最好地方，
+		CDockingBarStyle::sUseSysSettings — depend on system setting, default.
+		CDockingBarStyle::sIgnoreSysSettings | CDockingBarStyle::sFullDrag — full drag
+		CDockingBarStyle::sIgnoreSysSettings | CDockingBarStyle::sGhostDrag — ghost drag.
+	如果你想使用自动隐藏特性，你可以使用如下标志:
+		CDockingBarStyle::sAnimation — animate auto-hiding windows.
+		CDockingBarStyle::sNoAnimation — do not animate auto-hiding windows. 
+二、创建docking 窗口
+
+1.在你的窗口控件头文件中 添加 #include<ExtDockingWindow.h> 
+2.创建你的窗口类如 CSampleDockingWindow，它继承于 dockwins::CTitleDockingWindowImpl
+3.添加 messagemap 和 DECLARE_WND_CLASS
+	如下：
+		class CSampleDockingWindow :
+         public dockwins::CTitleDockingWindowImpl< SampleDockingWindow,
+                CWindow, dockwins::COutlookLikeTitleDockingWindowTraits >
+{
+        typedef CSampleDockingWindow    thisClass;
+        typedef dockwins::CTitleDockingWindowImpl<CSAMPLEDOCKINGWINDOW,
+         CWINDOW,
+         dockwins::COutlookLikeTitleDockingWindowTraits>  baseClass;
+public:
+        DECLARE_WND_CLASS(_T("CSampleDockingWindow"))
+        BEGIN_MSG_MAP(thisClass)
+                CHAIN_MSG_MAP(baseClass)
+        END_MSG_MAP()
+        
+	//// 该函数！！！！！！		
+	LRESULT OnSize(UINT /*uMsg*/, WPARAM wParam, LPARAM /*lParam*/, BOOL& bHandled)
+	{
+		if(wParam != SIZE_MINIMIZED )
+		{
+			RECT rc;
+			GetClientRect(&rc);
+			::SetWindowPos(mListView.m_hWnd, NULL, rc.left, rc.top, rc.right - rc.left, rc.bottom - rc.top ,SWP_NOZORDER | SWP_NOACTIVATE);
+		}
+		bHandled = FALSE;
+		return 1;
+	}
+};
+
+4.把该类作为Mainframe的成员
+5.在Mainframe的OnCreate函数里，调用CSampleDockingWindow的Create函数
+
+	LRESULT OnCreate(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, 
+					BOOL& /*bHandled*/)
+	{
+			...
+			InitializeDockingFrame();
+			...
+			CRect rcBar(0,0,100,100);
+			m_sampleDockWnd.Create(m_hWnd,rcBar,_T("Sample docking window"));
+			...
+	}
+
+6. Do not use empty rect even if you dock the window. When window start dragging it use previously stored floating rect size. 
+
+三、对通用窗口添加docking 特性
+
+	为了实现一个带有docking特性窗口的class，要继承dockwins::CDockingSiteImpl，在继承的子类里，把默认消息chain到基类中。
+	
+	class CDockSiteSampleWnd : public dockwins::CDockingSiteImpl < 
+        CDockSiteSampleWnd >
+	{
+        typedef dockwins::CDockingSiteImpl < CDockSiteSampleWnd > baseClass;
+	public:
+        DECLARE_WND_CLASS(_T("CDockSiteSampleWnd"))
+        BEGIN_MSG_MAP(CDockSiteSampleWnd)
+                CHAIN_MSG_MAP(baseClass)
+        END_MSG_MAP()
+	};
+	
+四、 添加Tabbed Docking Window的支持
+	0.#include <TabDockingBox.h>
+	1.改变基类：dockwins::CTitleDockingWindowImpl 为dockwins::CBoxedDockingWindowImpl
+	2.对dockwins::CBoxedDockingWindowImpl类要使用以下的traits：
+			COutlookLikeBoxedDockingWindowTraits
+			COutlookLikeExBoxedDockingWindowTraits
+			CVC6LikeBoxedDockingWindowTraits
+	3.实例：
+		class CSampleTabDockingWindow :
+         public dockwins::CBoxedDockingWindowImpl< SampleDockingWindow,CWindow, dockwins::COutlookLikeBoxedDockingWindowTraits >
+		{
+			typedef CSampleTabDockingWindow    thisClass;
+			typedef dockwins::CBoxedDockingWindowImpl<CSAMPLEDOCKINGWINDOW,  CWINDOW,
+			dockwins::COutlookLikeBoxedDockingWindowTraits>  baseClass;
+		public:
+			DECLARE_WND_CLASS(_T("CSampleTabDockingWindow"))
+			BEGIN_MSG_MAP(thisClass)
+                CHAIN_MSG_MAP(baseClass)
+			END_MSG_MAP()
+		};
+		
+五、添加自动隐藏
+	1. 在任何docking窗口的头文件添加DWAutoHide.h
+	
+六、停靠一个窗口	DockWindow
+			template<class T>
+				bool DockWindow(
+					T& dockWnd,			
+					CDockingSide side,		
+								// CDockingSide::sSingle 
+								// CDockingSide::sRight		
+								// CDockingSide::sLeft		
+								// CDockingSide::sTop		
+								// CDockingSide::sBottom								
+					unsigned long nBar,
+					float fPctPos,
+					unsigned long nWidth, 
+					unsigned long nHeight);
+七、从一个tabwidow dock到另一个
+			bool DockTo(HWND hWnd,int index=0);
+			
+			
+			
+			
+Docking Windows Frame Classes
+	CDockingFrameImplBase[DockingFrame.h] — this class provides basic docking window features.
+	CDockingFrameImpl [DockingFrame.h] — base class for a single document interface (SDI) frame window.
+	CMDIDockingFrameImpl [DockingFrame.h] — base class for a multiple document interface (MDI) frame window.
+	CDockingSiteImpl [DockingFrame.h] — base class for a generic window with docking window features.
+	CDockingFrameTraitsT [DockMisc.h] — traits of docking frame it's derived from CWinTraits class and add TSplitterBar parameter. 
+	
+Docking Windows Classes
+	CDockingWindowBaseImpl [DockingWindow.h] — base class for docking windows. The CDockingWindowBaseImpl class derives from CWindowImpl and has the same parameters except TWinTraits. Instead, it is uses CDockingWindowTraits.
+	CTitleDockingWindowImpl [DockingWindow.h] — titled docking window.
+	CBoxedDockingWindowImpl [DockingBox.h] — titled docking window which support tabbed docking.
+	CDockingWindowTraits [DockingWindow.h] — traits of docking window it's derived from CWinTraits class and add TCaption parameter. If you need to customize the docking window caption, make new caption class and use CDockingWindowTraits with new class as TCaption parameter. 
+
+
+Docking Windows Captions Classes
+	CCaptionBase[DockingWindow.h] — base class for other caption class
+	COutlookLikeExCaption and COutlookLikeCaption [ExtDockingWindow.h] — Microsoft Outlook™ likes caption.
+		COutlookLikeCaption — always horizontal caption. 
+		COutlookLikeExCaption — orientation of the caption depends on docking position. 
+	CVC6LikeCaption [ExtDockingWindow.h] — Microsoft Visual C++ 6™ IDE like caption. 
+
+
+Docking Windows Traits Classes
+	COutlookLikeTitleDockingWindowTraits [ExtDockingWindow.h] traits for COutlookLikeCaption, use this class with CTitleDockingWindowImpl
+	COutlookLikeExTitleDockingWindowTraits [ExtDockingWindow.h] traits for COutlookLikeExCaption, use this class with CTitleDockingWindowImpl
+	CVC6LikeTitleDockingWindowTraits [ExtDockingWindow.h] traits forCVC6LikeCaption, use this class with CTitleDockingWindowImpl
+	COutlookLikeBoxedDockingWindowTraits [TabDockingBox.h] traits for COutlookLikeCaption, use this class with CBoxedDockingWindowImpl
+	COutlookLikeExBoxedDockingWindowTraits [TabDockingBox.h] traits for COutlookLikeExCaption, use this class with CBoxedDockingWindowImpl
+	CVC6LikeBoxedDockingWindowTraits[TabDockingBox.h] traits for CVC6LikeCaption, use this class with CBoxedDockingWindowImpl 
+	
+Docking Windows Splitter Bar Classes
+	CSimpleSplitterBar[SimpleSplitterBar.h] - Very simple splitter bar.
+	CSimpleSplitterBarEx[SimpleSplitterBar.h] - another simple splitter bar. 

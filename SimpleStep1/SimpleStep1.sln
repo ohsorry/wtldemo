@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleStep1", "SimpleStep1.vcproj", "{44FF58A4-E7BC-44AE-A0FB-9F667D8E3EED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DockStep1", "..\DockStep1\DockStep1.vcproj", "{566CFF49-2D42-44FF-875A-508E3F835F5D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{44FF58A4-E7BC-44AE-A0FB-9F667D8E3EED}.Debug.ActiveCfg = Debug|Win32
+		{44FF58A4-E7BC-44AE-A0FB-9F667D8E3EED}.Debug.Build.0 = Debug|Win32
+		{44FF58A4-E7BC-44AE-A0FB-9F667D8E3EED}.Release.ActiveCfg = Release|Win32
+		{44FF58A4-E7BC-44AE-A0FB-9F667D8E3EED}.Release.Build.0 = Release|Win32
+		{566CFF49-2D42-44FF-875A-508E3F835F5D}.Debug.ActiveCfg = Debug|Win32
+		{566CFF49-2D42-44FF-875A-508E3F835F5D}.Debug.Build.0 = Debug|Win32
+		{566CFF49-2D42-44FF-875A-508E3F835F5D}.Release.ActiveCfg = Release|Win32
+		{566CFF49-2D42-44FF-875A-508E3F835F5D}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
