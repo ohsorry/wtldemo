@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropListTest", "PropListTest.vcproj", "{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		UNICODE Release = UNICODE Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.Debug.ActiveCfg = Debug|Win32
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.Debug.Build.0 = Debug|Win32
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.Release.ActiveCfg = Release|Win32
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.Release.Build.0 = Release|Win32
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.UNICODE Release.ActiveCfg = UNICODE Release|Win32
+		{D5D45F57-3A0A-4194-ADFC-4ECB2C5A07BF}.UNICODE Release.Build.0 = UNICODE Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
