@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>002</ProjectName>
+    <ProjectGuid>{26DD0141-E69A-4575-B332-4788C6226968}</ProjectGuid>
+    <RootNamespace>My002</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="002.cpp" />
+    <ClCompile Include="002Doc.cpp" />
+    <ClCompile Include="002View.cpp" />
+    <ClCompile Include="dlg_effect_base.cpp" />
+    <ClCompile Include="dlg_effect_lib.cpp" />
+    <ClCompile Include="dlg_effect_shadow.cpp" />
+    <ClCompile Include="dlg_modal_base.cpp" />
+    <ClCompile Include="dlg_open_image.cpp" />
+    <ClCompile Include="dlg_save_image.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="wnd_color_button.cpp" />
+    <ClCompile Include="wnd_palette_slider.cpp" />
+    <ClCompile Include="wnd_top_tool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="002.h" />
+    <ClInclude Include="002Doc.h" />
+    <ClInclude Include="002View.h" />
+    <ClInclude Include="dlg_effect_base.h" />
+    <ClInclude Include="dlg_effect_dialog.h" />
+    <ClInclude Include="dlg_effect_lib.h" />
+    <ClInclude Include="dlg_effect_shadow.h" />
+    <ClInclude Include="dlg_modal_base.h" />
+    <ClInclude Include="dlg_open_image.h" />
+    <ClInclude Include="dlg_save_image.h" />
+    <ClInclude Include="interface_zoom.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="wnd_bottom_status.h" />
+    <ClInclude Include="wnd_palette_slider.h" />
+    <ClInclude Include="wnd_top_tool.h" />
+    <ClInclude Include="wnd_transparency_slider.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dlg_effect_color_level.inl" />
+    <None Include="dlg_effect_color_tone.inl" />
+    <None Include="dlg_effect_lensflare.inl" />
+    <None Include="res\002.ico" />
+    <None Include="res\002Doc.ico" />
+    <None Include="res\menu_icon\adjustrgb.png" />
+    <None Include="res\bar_top.png" />
+    <None Include="res\menu_icon\brightness_contrast.png" />
+    <None Include="res\menu_icon\color_balance.png" />
+    <None Include="res\menu_icon\color_level.png" />
+    <None Include="res\menu_icon\color_tone.png" />
+    <None Include="res\menu_icon\effect_fillgrid.png" />
+    <None Include="res\menu_icon\effect_invert.png" />
+    <None Include="res\menu_icon\effect_lensflare.png" />
+    <None Include="res\menu_icon\effect_oil.png" />
+    <None Include="res\menu_icon\effect_pencil.png" />
+    <None Include="res\menu_icon\effect_splash.png" />
+    <None Include="res\menu_icon\effect_supernova.png" />
+    <None Include="res\menu_icon\effect_twist.png" />
+    <None Include="res\example.jpg" />
+    <None Include="res\menu_icon\flip.png" />
+    <None Include="res\menu_icon\grayscale.png" />
+    <None Include="res\menu_icon\hue_saturation.png" />
+    <None Include="res\ini1.bin" />
+    <None Include="res\menu_icon\mirror.png" />
+    <None Include="res\My002.rc2" />
+    <None Include="res\menu_icon\open.png" />
+    <None Include="res\menu_icon\print.png" />
+    <None Include="res\menu_icon\quit.png" />
+    <None Include="res\menu_icon\resize.png" />
+    <None Include="res\menu_icon\rotate270.png" />
+    <None Include="res\menu_icon\rotate90.png" />
+    <None Include="res\menu_icon\save_as.png" />
+    <None Include="res\shadow.png" />
+    <None Include="res\menu_icon\smooth_edge.png" />
+    <None Include="res\tex_bricks.png" />
+    <None Include="res\tex_canvas_1.png" />
+    <None Include="res\tex_canvas_2.png" />
+    <None Include="res\tex_dot.png" />
+    <None Include="res\tex_grid.png" />
+    <None Include="res\tex_leather.png" />
+    <None Include="res\tex_mat.png" />
+    <None Include="res\tex_sandstone.png" />
+    <None Include="res\tex_weave.png" />
+    <None Include="res\menu_icon\to_ascii.png" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\lang.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="002.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

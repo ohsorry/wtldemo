@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="002.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="002Doc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="002View.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_effect_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_effect_lib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_effect_shadow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_modal_base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_open_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlg_save_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd_color_button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd_palette_slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd_top_tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="002.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="002Doc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="002View.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_effect_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_effect_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_effect_lib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_effect_shadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_modal_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_open_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlg_save_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interface_zoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd_bottom_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd_palette_slider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd_top_tool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd_transparency_slider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dlg_effect_color_level.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="dlg_effect_color_tone.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="dlg_effect_lensflare.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="res\002.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\002Doc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\adjustrgb.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bar_top.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\brightness_contrast.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\color_balance.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\color_level.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\color_tone.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_fillgrid.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_invert.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_lensflare.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_oil.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_pencil.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_splash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_supernova.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\effect_twist.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\example.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\flip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\grayscale.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\hue_saturation.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ini1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\mirror.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\My002.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\print.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\quit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\resize.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\rotate270.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\rotate90.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\save_as.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\shadow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\smooth_edge.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_bricks.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_canvas_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_canvas_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_dot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_grid.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_leather.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_mat.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_sandstone.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tex_weave.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_icon\to_ascii.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\lang.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="002.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
